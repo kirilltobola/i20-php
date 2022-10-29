@@ -1,0 +1,20 @@
+.notification-container {
+    left: 0;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    height: 60px;
+
+    display: none;
+
+    background-color: #006be5;
+    color: white;
+    cursor: pointer;
+}
+
+.notification-content {
+    margin: 0 auto;
+    font-size: 1.3em;
+}

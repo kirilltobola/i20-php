@@ -1,0 +1,22 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #eee;
+}
+
+.status-code_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+.status-code {
+    font-size: 10em;
+    color: #fe1b1b;
+}
+
+.error-desc {
+    font-size: 2em;
+    color: #333;
+}
