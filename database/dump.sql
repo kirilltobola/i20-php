@@ -18,12 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `tobola-db-dump`
+-- База данных: `tobola-db`
 --
 
-CREATE DATABASE IF NOT EXISTS `tobola-db-dump`;
+CREATE DATABASE IF NOT EXISTS `tobola-db`;
 
-USE `tobola-db-dump`;
+USE `tobola-db`;
 
 -- --------------------------------------------------------
 
