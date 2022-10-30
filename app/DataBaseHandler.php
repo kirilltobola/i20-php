@@ -23,7 +23,6 @@ class DataBaseHandler
         $password = $this->db_config['db_password'];
 
         $dsn = "mysql:host={$host};port={$port};dbname={$dbname};charset=UTF8";
-        var_dump($dsn);
         $this->db = new PDO($dsn, $username, $password);
     }
 
@@ -37,7 +36,7 @@ class DataBaseHandler
     {
         // TODO: update sql queries
         $query = $this->db->prepare($this->queries['n_category_products']);
-        $offset = $limit * $page;
+        $offset = $limit * ($page - 1);
         $query->bindParam(1, $category_id, PDO::PARAM_INT);
         $query->bindParam(2, $category_id, PDO::PARAM_INT);
         $query->bindParam(3, $limit, PDO::PARAM_INT);
@@ -70,6 +69,7 @@ class DataBaseHandler
             return $query->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             var_dump($e->getMessage());
+            abort(500);
             die();
         }
     }
