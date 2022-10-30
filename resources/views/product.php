@@ -22,6 +22,10 @@
     <div id="notification-content" class="notification-content"></div>
 </div>
 
+<div>
+    <a class="go-back-btn" href="<?= $go_back_url ?>">Назад</a>
+</div>
+
 <div class="container">
     <div class="scroll ml-2 mt-2">
         <?php foreach ($images as $image) : ?>
