@@ -1,3 +1,8 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
 .product_container {
     display: flex;
     flex-wrap: wrap;
@@ -7,8 +12,6 @@
 
 .product_item {
     border: 2px solid #333;
-    margin-left: 10px;
-    margin-top: 10px;
 }
 
 .product_desc {
