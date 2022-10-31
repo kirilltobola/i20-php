@@ -16,6 +16,11 @@ body {
     color: #fe1b1b;
 }
 
+.success-header {
+    font-size: 5em;
+    color: #269f5d;
+}
+
 .error-desc {
     font-size: 2em;
     color: #333;

@@ -1,6 +1,24 @@
 body {
 	background-color: #eee;
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+.nav-bar {
+	background-color: #4d88ef;
+	display: flex;
+	flex-direction: row;
+	margin-left: unset;
+}
+
+.nav-bar__item {
+	font-size: 1.5em;
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav-bar__item:hover {
+	background-color: #006be5;
 }
 
 .flex-right {

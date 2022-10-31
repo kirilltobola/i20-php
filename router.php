@@ -9,6 +9,7 @@ $routes = [
     '/categories' => $CONTROLLERS_DIR.'categories.php',
     '/category' => $CONTROLLERS_DIR.'category.php',
     '/product' => $CONTROLLERS_DIR.'product.php',
+    '/feedback' => $CONTROLLERS_DIR.'feedback.php',
 ];
 
 function route(string $path, array $routes): void

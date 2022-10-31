@@ -62,6 +62,18 @@ class DataBaseHandler
         ];
     }
 
+    public function saveFeedback(array $params): void
+    {
+        $query = $this->db->prepare($this->queries['save_feedback']);
+        try {
+            $query->execute($params);
+        } catch (PDOException $e) {
+            var_dump($e->getMessage());
+            abort(500);
+            die();
+        }
+    }
+
     private function executeQuery(PDOStatement $query, $params=null): array
     {
         try {
