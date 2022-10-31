@@ -20,7 +20,7 @@
     <?php foreach ($results as $result) : ?>
         <div class="card-img">
             <div class="card-img__head card-img__head_blue">
-                <p class="card-img__number"><?= $result['category_products'] ?></p>
+                <p class="card-img__number"><?= $result['count_products'] ?></p>
             </div>
             <div class="card-img__body">
                 <p class="card-img__content">

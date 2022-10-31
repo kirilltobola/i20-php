@@ -35,12 +35,11 @@ class DataBaseHandler
     public function getProducts(int $category_id, int $limit=12, int $page=0): array
     {
         // TODO: update sql queries
-        $query = $this->db->prepare($this->queries['n_category_products']);
+        $query = $this->db->prepare($this->queries['category_products']);
         $offset = $limit * ($page - 1);
         $query->bindParam(1, $category_id, PDO::PARAM_INT);
-        $query->bindParam(2, $category_id, PDO::PARAM_INT);
-        $query->bindParam(3, $limit, PDO::PARAM_INT);
-        $query->bindParam(4, $offset, PDO::PARAM_INT);
+        $query->bindParam(2, $limit, PDO::PARAM_INT);
+        $query->bindParam(3, $offset, PDO::PARAM_INT);
         return $this->executeQuery($query);
     }
 
