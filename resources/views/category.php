@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/resources/css/category.css">
     <link rel="stylesheet" href="/resources/css/utilities.css">
+    <link rel="stylesheet" href="/resources/css/category.css">
+
 </head>
 <body>
     <a class="go-back-btn ml-2" href="/categories">Назад</a>
@@ -36,10 +37,10 @@
     <?php endforeach; ?>
     </div>
     <div class="pagination ml-2 mt-2">
-        <a href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] - 1 ?>">
+        <a class="link p-2 <?php if ($disable_backwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] - 1 ?>">
             Предыдущая страница
         </a>
-        <a href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] + 1 ?>">
+        <a class="link p-2 <?php if ($disable_forwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] + 1 ?>">
             Следующая страница
         </a>
     </div>

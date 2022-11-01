@@ -19,12 +19,10 @@ body {
     flex-direction: row;
 }
 
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+    color: #555555;
 }
 
 .pagination a.active {
