@@ -63,9 +63,10 @@ class DataBaseHandler
 
     public function saveFeedback(array $params): void
     {
+        $mapped_params = array_map("htmlspecialchars", $params);
         $query = $this->db->prepare($this->queries['save_feedback']);
         try {
-            $query->execute($params);
+            $query->execute($mapped_params);
         } catch (PDOException $e) {
             var_dump($e->getMessage());
             abort(500);
