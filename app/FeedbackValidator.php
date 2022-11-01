@@ -12,24 +12,24 @@ class FeedbackValidator
     public function validateData(array $data): array
     {
         $input_name_pattern = [
-            'username' => $this->non_empty_pattern,
-            'email' => $this->email_pattern,
-            'date_of_birth' => $this->date_pattern,
-            'sex' => $this->bool_pattern,
-            'subject' => $this->non_empty_pattern,
-            'point' => $this->non_empty_pattern,
-            'agree' => $this->non_empty_pattern,
+            'username' => [$this->non_empty_pattern, "Обязательное поле"],
+            'email' => [$this->email_pattern, "Поле может содержать только латиницу и следующие символы: ._-@"],
+            'date_of_birth' => [$this->date_pattern, "Допустимый формат даты: yyyy-mm-dd"],
+            'sex' => [$this->bool_pattern, "Обязательное поле"],
+            'subject' => [$this->non_empty_pattern, "Обязательное поле"],
+            'point' => [$this->non_empty_pattern, "Обязательное поле"],
+            'agree' => [$this->non_empty_pattern, "Обязательное поле"],
         ];
 
         $errors = [];
         foreach ($input_name_pattern as $input_name => $pattern) {
             if (!array_key_exists($input_name, $data)) {
-                $errors[$input_name] = 'error';
+                $errors[$input_name] = $pattern[1];
                 continue;
             }
 
-            if (!$this->validate($data[$input_name], $pattern)) {
-                $errors[$input_name] = 'error';
+            if (!$this->validate($data[$input_name], $pattern[0])) {
+                $errors[$input_name] = $pattern[1];
             }
         }
         return $errors;
