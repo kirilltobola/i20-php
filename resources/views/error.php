@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/resources/css/404.css">
+    <link rel="stylesheet" href="/resources/css/info.css">
 </head>
 <body>
 <div class="status-code_container">
