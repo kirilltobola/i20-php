@@ -12,3 +12,19 @@ function abort($status_code=404): void
     require "resources/views/error.php";
     die();
 }
+
+function saveCookies(array $data): void
+{
+    foreach ($data as $k => $v) {
+        setcookie($k, $v, time()+3600, '/');
+    }
+}
+
+function getCookies(array $data): array
+{
+    $res = [];
+    foreach ($data as $key) {
+        $res[$key] = $_COOKIE[$key];
+    }
+    return $res;
+}
