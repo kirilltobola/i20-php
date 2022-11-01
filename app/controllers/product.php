@@ -3,7 +3,12 @@
 require 'app/DataBaseHandler.php';
 
 $db_handler = new \App\DataBaseHandler();
-$results = $db_handler->getProduct($_GET['id']);
+$product_id = $_GET['id'];
+if (!is_numeric($product_id) || $product_id < 1) {
+    abort();
+}
+
+$results = $db_handler->getProduct($product_id);
 $main_info = $results['main_info'][0];
 if (!isset($main_info) || count($main_info) < 1) {
     abort();
