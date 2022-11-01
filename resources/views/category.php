@@ -22,18 +22,26 @@
     <div class="product_container mt-2 ml-2">
 
     <?php foreach ($results as $result) : ?>
-        <div class="product_item mt-1 ml-1">
+        <div class="mt-1 ml-1">
             <div>
                 <img width="300" height="300" src="<?= $result['image_url'] ?>" alt="<?= $result['image_alt'] ?>">
             </div>
             <div class="product_desc">
                 <h3>
-                    <a href="product?id=<?= $result['product_id'] ?>"><?= $result['product_title'] ?></a>
+                    <a class="link" href="product?id=<?= $result['product_id'] ?>"><?= $result['product_title'] ?></a>
                 </h3>
-                <a href="category?category_id=<?= $result['main_category_id'] ?>&page=1"><?= $result['main_category_title'] ?></a>
+                <a class="link" href="category?category_id=<?= $result['main_category_id'] ?>&page=1"><?= $result['main_category_title'] ?></a>
             </div>
         </div>
     <?php endforeach; ?>
+    </div>
+    <div class="pagination ml-2 mt-2">
+        <a href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] - 1 ?>">
+            Предыдущая страница
+        </a>
+        <a href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] + 1 ?>">
+            Следующая страница
+        </a>
     </div>
 </body>
 </html>
