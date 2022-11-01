@@ -16,18 +16,20 @@
 <div class="nav-bar">
     <a class="nav-bar__item p-1" href="/feedback">Оставить отзыв</a>
 </div>
+<div class="ml-2">
+    <h1>Категории товаров</h1>
+</div>
 <div class="card-container">
+
     <?php foreach ($results as $result) : ?>
         <div class="card-img">
             <div class="card-img__head card-img__head_blue">
-                <p class="card-img__number"><?= $result['count_products'] ?></p>
+                <span class="card-img__number"><?= $result['count_products'] ?></span>
             </div>
             <div class="card-img__body">
-                <p class="card-img__content">
-                    <a href="category?category_id=<?= $result['category_id'] ?>&page=1">
-                        <?= $result['category_title'] ?>
-                    </a>
-                </p>
+                <a class="card-img__content link" href="category?category_id=<?= $result['category_id'] ?>&page=1">
+                    <?= $result['category_title'] ?>
+                </a>
             </div>
         </div>
     <?php endforeach; ?>

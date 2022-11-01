@@ -66,13 +66,11 @@ body {
 }
 
 .card-img__head {
-	background-color: #269f5d;
-	color: white;
-
-	width: 200px;
 	height: 200px;
-	
-	text-align: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	font-weight: 700;
 }
@@ -81,13 +79,15 @@ body {
 	font-size: 5em;
 	font-weight: 400;
 	margin-top: unset;
-	line-height: 200px;
 }
 
 .card-img__body {
 	background-color: white;
-	
-	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 250px;
 	height: 70px;
 	
 	font-weight: 500;
@@ -96,10 +96,11 @@ body {
 }
 
 .card-img__content {
-	line-height: 70px;
-	margin: unset;
-	margin-left: 8px;
 	font-weight: 400;
+	color: #006be5;
+	text-decoration-line: none;
+	display: flex;
+
 }
 
 .reload-btn {
