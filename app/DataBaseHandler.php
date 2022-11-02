@@ -144,9 +144,7 @@ class DataBaseHandler
             SELECT i.url, i.alt
             FROM images i
             JOIN product_image pi
-            ON i.id = pi.image_id
-            JOIN products p
-            ON pi.product_id = p.id AND p.id = :product_id;
+            ON i.id = pi.image_id AND pi.product_id = :product_id;
         ');
         $images = $this->executeQuery($query_images, $params);
 
@@ -154,9 +152,7 @@ class DataBaseHandler
             SELECT c.id, c.title, c.description
             FROM categories c
             JOIN category_product cp
-            ON c.id = cp.category_id
-            JOIN products p
-            ON cp.product_id = p.id AND p.id = :product_id;
+            ON c.id = cp.category_id AND cp.product_id = :product_id;
         ');
         $categories = $this->executeQuery($query_categories, $params);
         return [
