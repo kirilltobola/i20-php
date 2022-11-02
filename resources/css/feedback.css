@@ -27,10 +27,11 @@ body {
 	background-color: white;
 	border-radius: 2%;
 
-	width:  500px;
-  	height: 500px;
+	/*width:  500px;*/
+  	/*height: 500px;*/
+	font-size: 1.5em;
 
-  	padding: 7%;
+  	padding: 60px;
 }
 
 .form-header {
@@ -47,7 +48,7 @@ body {
 }
 
 .from-group__label {
-	font-size: small;
+	font-size: 0.8em;
 	font-weight: 600;
 }
 
@@ -102,6 +103,7 @@ body {
 
 .alert {
 	color: red;
+	font-size: 0.8em;
 }
 
 .login-button {

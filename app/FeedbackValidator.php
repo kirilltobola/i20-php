@@ -13,7 +13,7 @@ class FeedbackValidator
     {
         $input_name_pattern = [
             'username' => [$this->non_empty_pattern, "Обязательное поле"],
-            'email' => [$this->email_pattern, "Поле может содержать только латиницу и следующие символы: ._-@"],
+            'email' => [$this->email_pattern, "Поле может содержать только латиницу <br> и следующие символы: ._-@"],
             'date_of_birth' => [$this->date_pattern, "Допустимый формат даты: yyyy-mm-dd"],
             'sex' => [$this->bool_pattern, "Обязательное поле"],
             'subject' => [$this->non_empty_pattern, "Обязательное поле"],
