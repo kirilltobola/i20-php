@@ -24,7 +24,9 @@ function getCookies(array $data): array
 {
     $res = [];
     foreach ($data as $key) {
-        $res[$key] = $_COOKIE[$key];
+        if (array_key_exists($key, $_COOKIE)) {
+            $res[$key] = $_COOKIE[$key];
+        }
     }
     return $res;
 }
