@@ -6,9 +6,13 @@ $db_handler = new \App\DataBaseHandler();
 $category_id = $_GET['category_id'];
 $page = $_GET['page'];
 
-if (!isset($category_id) || !isset($page)) {
+if (!isset($category_id)) {
     abort();
 }
+if (!isset($page)) {
+    $page = 1;
+}
+
 if (!is_numeric($category_id) || !is_numeric($page) || $category_id < 1 || $page < 1) {
     abort();
 }

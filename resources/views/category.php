@@ -37,10 +37,10 @@
     <?php endforeach; ?>
     </div>
     <div class="pagination ml-2 mt-2">
-        <a class="link p-2 <?php if ($disable_backwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] - 1 ?>">
+        <a class="link p-2 <?php if ($disable_backwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $category_id; ?>&page=<?php echo $page - 1 ?>">
             Предыдущая страница
         </a>
-        <a class="link p-2 <?php if ($disable_forwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $_GET['category_id']; ?>&page=<?php echo $_GET['page'] + 1 ?>">
+        <a class="link p-2 <?php if ($disable_forwards) echo "disabled-link"; ?>" href="category?category_id=<?php echo $category_id; ?>&page=<?php echo $page + 1 ?>">
             Следующая страница
         </a>
     </div>
