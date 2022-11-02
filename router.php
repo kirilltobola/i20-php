@@ -3,13 +3,13 @@
 require 'functions.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'])['path'];
-$CONTROLLERS_DIR = __DIR__."/app/controllers/";
+$controllers_dir = __DIR__."/app/controllers/";
 
 $routes = [
-    '/categories' => $CONTROLLERS_DIR.'categories.php',
-    '/category' => $CONTROLLERS_DIR.'category.php',
-    '/product' => $CONTROLLERS_DIR.'product.php',
-    '/feedback' => $CONTROLLERS_DIR.'feedback.php',
+    '/categories' => $controllers_dir.'categories.php',
+    '/category' => $controllers_dir.'category.php',
+    '/product' => $controllers_dir.'product.php',
+    '/feedback' => $controllers_dir.'feedback.php',
 ];
 
 function route(string $path, array $routes): void
