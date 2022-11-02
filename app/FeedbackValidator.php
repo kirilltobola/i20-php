@@ -7,7 +7,7 @@ class FeedbackValidator
     private string $email_pattern = "/\w+@\w+\.\w+$/";
     private string $date_pattern = "/\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/";
     private string $bool_pattern = "/^[01]$/";
-    private string $non_empty_pattern = "/.+/";
+    private string $non_empty_pattern = "/[\S]+/";
 
     public function validateData(array $data): array
     {
