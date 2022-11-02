@@ -37,9 +37,10 @@ $go_back_url = "/category?category_id={$main_info['main_category_id']}&page=1";
 if(isset($_SERVER['HTTP_REFERER'])) {
     $parsed_url = parse_url($_SERVER['HTTP_REFERER']);
     $query = $parsed_url['query'];
+    $host = $parsed_url['host'];
     $path = $parsed_url['path'];
 
-    if ($path == '/category') {
+    if ($host == $_SERVER['SERVER_NAME'] && $path == '/category') {
         parse_str($query, $get_array);
         foreach ($categories as $category) {
             if ($category['id'] == $get_array['category_id']) {
